@@ -1157,6 +1157,10 @@ footer{
     .home h1{
         font-size: 1.3rem;
     }
+    .wimg>img{
+        width:80vw;
+    }
+        
 }
 @media screen and (max-width:365px){
     .work>p{
