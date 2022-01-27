@@ -728,7 +728,7 @@ h4 span{
 }
 .soft-r-ani{
     transition: 2s;
-    clip-path: circle(200px at center);
+    clip-path: circle(250px at center);
 }
 
 
@@ -837,6 +837,9 @@ h4 span{
     justify-content: center;
     /* align-items: center; */
 }
+.wcard{
+    min-height: 140px;
+}
 .wcard-l{
     border:2px solid white;
     position: relative;
@@ -846,14 +849,16 @@ h4 span{
 }
 
 .wimg{
-    clip-path: polygon(0% 0%,0% 100%,0% 100% ,0% 0%);
     /* margin-bottom: 2rem; */
     position: relative;
-    height: 100%;
+    min-height:140px ;
     display: flex;
     overflow: hidden;
     
     width: 100%;
+}
+.wimg-clip-path{
+    clip-path: polygon(0% 0%,0% 100%,0% 100% ,0% 0%);
 }
 .wimg-ani{
     transition: 2s;
@@ -1137,7 +1142,12 @@ footer{
     .home p{
         width: 70%;
     }
-    
+    .edu-c1::before{
+        height: 125px;
+    }
+    .edu-c3{
+        top:-90px;
+    }
    
     
     .img-con{
@@ -1160,9 +1170,21 @@ footer{
     .wimg>img{
         width:80vw;
     }
+    .home>h2{
+        font-size:200%;
+    }
         
 }
 @media screen and (max-width:365px){
+    .edu-c2{
+        top:-45px;
+    }
+    .edu-c3{
+        top:-115px;
+    }
+    .edu-c3::before{
+        height: 130px;
+    }
     .work>p{
         font-size: 90%;
     }
