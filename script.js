@@ -220,13 +220,13 @@ const work_img_observer=new IntersectionObserver((entry)=>{
     }
     else{
         entry.forEach((e)=>{
-            e.target.classList.add("wimg-ani")
+            e.target.childNodes[1].classList.replace('wimg-clip-path','wimg-ani')
         })
     }
 },options9);
 
-let wimg=document.querySelectorAll(".wimg")
-wimg.forEach(e => {    
+let wcards=document.querySelectorAll(".wcard")
+wcards.forEach(e => {    
     work_img_observer.observe(e);
 });
 
@@ -252,7 +252,7 @@ softskills.observe($(".soft-l")[0]);
 
 
 let options10={
-    threshold:0,
+    threshold:0.5,
 }
 const Interest=new IntersectionObserver((entry)=>{
     if(!entry[0].isIntersecting){
@@ -273,7 +273,7 @@ const Interest=new IntersectionObserver((entry)=>{
     }
 },options10);
 
-Interest.observe($(".li-con")[0]);
+Interest.observe($(".hob-con")[0]);
 
 let options12={
     threshold:0.6
